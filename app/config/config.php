@@ -9,7 +9,7 @@ define('DB_NAME', 'scandi_db');
 define('APPROOT', dirname(dirname(__FILE__)));
 
 // URL Root
-define('URLROOT', '/scandimanager'); // development format example "/yoururlroot"
+define('URLROOT', '/scandimanager');
 
 // Site Name
 define('SITENAME', "Scandi Manager");
