@@ -15,7 +15,7 @@ class Pages extends Controller
     $this->view('pages/index', $data);
   }
 
-  public function new()
+  public function addProduct()
   {
     $data = [
       'title' => 'Hello from new product page'

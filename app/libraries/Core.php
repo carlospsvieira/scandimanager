@@ -13,12 +13,22 @@ class Core
   {
     $url = $this->getUrl();
 
-    // Look in controllers for first value
-    if (isset($url[0]) && file_exists('../app/controllers/' . ucwords($url[0]) . '.php')) {
-      // If exists, set as controller
-      $this->currentController = ucwords($url[0]);
+     // Handle add-product URL
+     if ($url[0] === 'add-product') {
+      // Set controller to Pages
+      $this->currentController = 'Pages';
+      // Set method to newProduct
+      $this->currentMethod = 'addProduct';
       // Unset 0 index
       unset($url[0]);
+    } else {
+      // Look in controllers for first value
+      if (isset($url[0]) && file_exists('../app/controllers/' . ucwords($url[0]) . '.php')) {
+        // If exists, set as controller
+        $this->currentController = ucwords($url[0]);
+        // Unset 0 index
+        unset($url[0]);
+      }
     }
 
     // Require controller
