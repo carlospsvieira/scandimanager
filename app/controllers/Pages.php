@@ -9,9 +9,18 @@ class Pages extends Controller
   public function index()
   {
     $data = [
-      'title' => 'Welcome to Carlos MVC Framework.'
+      'title' => 'Hello from products page.'
     ];
 
     $this->view('pages/index', $data);
+  }
+
+  public function new()
+  {
+    $data = [
+      'title' => 'Hello from new product page'
+    ];
+
+    $this->view('pages/new', $data);
   }
 }
